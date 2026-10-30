@@ -1,0 +1,56 @@
+VÉRTICE Residencial — site demonstrativo (portfólio), versão 3
+
+PUBLICAR
+  Arraste só a pasta  site  para o Netlify (app.netlify.com/drop).
+  A pasta ferramentas e este LEIA-ME ficam fora da publicação.
+
+ESTRUTURA
+  site/                 tudo o que vai para o ar
+    index.html          página institucional
+    aurora.html         torre residencial (layout escuro, corte interativo, plantas)
+    jardins.html        condomínio de casas (implantação clicável, faixa de fotos)
+    atelier.html        estúdios e lofts (módulos, tabela comparativa)
+    creditos.html       créditos e licença de todas as imagens
+    404.html            página de "não encontrada" (o Netlify usa sozinho)
+    favicon.ico, favicon.svg, apple-touch-icon.png   ícones
+    css/style.css       todo o visual
+    js/main.js          menu, galeria, mapa, abas, formulário, WhatsApp (sem bibliotecas)
+    fonts/              Instrument Serif e Schibsted Grotesk (SIL Open Font License)
+    img/                fotos em WebP: sm/ 800 px, md/ 1200 px, thumb/ 200 px
+    img/og-vertice.jpg  imagem da prévia quando o link é compartilhado
+  ferramentas/gerar_site.py   gerador das páginas (opcional, veja abaixo)
+
+DEPOIS DE PUBLICAR (2 minutos)
+  No topo de ferramentas/gerar_site.py:
+  1. SITE_URL = 'https://seu-endereco.netlify.app'
+     Sem isso, WhatsApp e redes podem não mostrar a imagem de prévia do link.
+  2. WHATSAPP = '5593999999999'  (só números, com 55 e DDD) — opcional.
+     Vazio = modo demonstração (o botão mostra a mensagem pronta).
+  Depois rode, na pasta do projeto:  python ferramentas/gerar_site.py
+  e publique a pasta site de novo.
+
+GOOGLE
+  As páginas estão com "noindex": o site abre normalmente pelo link, mas não
+  aparece em buscas (a empresa é fictícia). Para mudar, troque a linha
+  <meta name="robots" content="noindex"> no gerador.
+
+EDITAR À MÃO OU PELO GERADOR?
+  Texto pontual: edite direto no HTML dentro de site/.
+  Menu, rodapé, dados dos empreendimentos ou fotos: edite o gerador e rode-o,
+  porque ele reescreve todos os HTML. Edição feita à mão num HTML some quando
+  o gerador roda de novo.
+
+LINKS QUE JÁ CHEGAM COM O EMPREENDIMENTO MARCADO NO FORMULÁRIO
+  index.html?empreendimento=aurora#contato
+  index.html?empreendimento=atelier&objetivo=visita#contato
+
+TUDO É FICTÍCIO
+  Empresa, números, endereços, plantas e mapa. O formulário valida os campos,
+  mas não envia nem guarda nada.
+
+IMAGENS
+  Unsplash, Licença Unsplash. Uma série por empreendimento:
+  Aurora = perspectivas 3D de um mesmo projeto (Aalo Lens), marcadas como
+  "Perspectiva ilustrada"; Jardins = fotos de uma mesma casa real (Caroline Badran);
+  Atelier = interiores de um mesmo galpão de concreto (Neon Wang).
+  Nenhuma chave, senha ou serviço externo é usado no código.
