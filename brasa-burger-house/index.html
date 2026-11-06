@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BRASA Burger House — Hambúrguer artesanal na brasa | Vila Madalena, SP</title>
+  <meta name="description" content="Hamburgueria artesanal premium na Vila Madalena. Blends moídos no dia, grelhados no carvão a 400 °C, bacon defumado na casa. Veja o cardápio e peça pelo WhatsApp.">
+  <meta name="theme-color" content="#0E0C0B">
+  <link rel="canonical" href="https://brasaburguerhouse.netlify.app/">
+
+  <!-- Compartilhamento (WhatsApp, Instagram, Facebook) -->
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="BRASA Burger House">
+  <meta property="og:title" content="BRASA Burger House — Nascido na brasa">
+  <meta property="og:description" content="Hambúrguer artesanal grelhado no carvão. Veja o cardápio e peça pelo WhatsApp.">
+  <meta property="og:url" content="https://brasaburguerhouse.netlify.app/">
+  <meta property="og:image" content="https://brasaburguerhouse.netlify.app/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hambúrguer smash com cheddar derretido sobre fundo escuro">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="preload" as="image" href="img/hero-smash.jpg" imagesrcset="img/sm/hero-smash.jpg 800w, img/hero-smash.jpg 1600w" imagesizes="100vw">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "BRASA Burger House",
+    "description": "Hamburgueria artesanal com hambúrgueres grelhados no carvão.",
+    "image": "https://brasaburguerhouse.netlify.app/img/og-image.jpg",
+    "url": "https://brasaburguerhouse.netlify.app/",
+    "servesCuisine": ["Hambúrguer", "Churrasco", "Defumados"],
+    "priceRange": "$$",
+    "acceptsReservations": true,
+    "hasMenu": "https://brasaburguerhouse.netlify.app/#cardapio",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua da Brasa, 400",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "05400-000",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "18:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "18:00", "closes": "01:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "23:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__bar container">
+      <a href="#topo" class="logo" aria-label="BRASA Burger House — início">
+        <svg class="logo__mark" width="30" height="38" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 2c2 7 9 11 9 20a9 9 0 0 1-18 0c0-5 3-8 5-11 0 4 2 6 4 6-2-6 0-11 0-15z" fill="none" stroke="#D9541E" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 24c1.6 2 3 3.2 3 5.4a3 3 0 0 1-6 0c0-2 1.4-3.4 3-5.4z" fill="#C27A4A"/></svg>
+        <span class="logo__text">
+          <span class="logo__name">BRASA</span>
+          <span class="logo__sub">BURGER HOUSE</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="#destaques">Destaques</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#brasa">A Brasa</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#historia">História</a>
+        <a href="#visite">Visite</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" type="button" data-open-cart>
+          <span class="sr-only">Abrir carrinho<span id="cart-badge-label"></span></span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-badge" id="cart-badge" aria-hidden="true" hidden>0</span>
+        </button>
+        <button class="btn btn--fire hide-sm" type="button" data-open-cart>Fazer pedido</button>
+        <button class="icon-btn menu-toggle" type="button" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav container" id="mobile-nav" aria-label="Menu móvel" hidden>
+      <a href="#destaques">Destaques</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#brasa">A Brasa</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#historia">História</a>
+      <a href="#visite">Visite</a>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="topo" aria-labelledby="hero-titulo">
+      <img class="hero__img" src="img/hero-smash.jpg" srcset="img/sm/hero-smash.jpg 800w, img/hero-smash.jpg 1600w" sizes="100vw" width="1600" height="2400" fetchpriority="high" alt="Hambúrguer smash com cheddar derretido e crosta tostada da grelha, sobre fundo escuro">
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="embers" id="embers" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <div class="hero__copy">
+          <p class="eyebrow fade-up"><span class="eyebrow__line" aria-hidden="true"></span>Hamburgueria artesanal · Grelhado no carvão</p>
+          <h1 class="hero__title fade-up d1" id="hero-titulo">Nascido<br>na <em>brasa.</em></h1>
+          <p class="hero__lead fade-up d2">Blend de costela e acém moído todo dia, selado sobre carvão a 400 °C e servido em brioche tostado na grelha. Sem atalhos — só fogo, tempo e paciência.</p>
+          <div class="btn-row fade-up d3">
+            <a class="btn btn--fire btn--lg" href="#cardapio">Ver cardápio
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="https://wa.me/" data-wa target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg>
+              Pedir no WhatsApp<span class="sr-only"> (abre em nova aba)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__side fade-up d4">
+          <div class="feature-chip">
+            <div>
+              <p class="feature-chip__label">Em destaque</p>
+              <p class="feature-chip__name">Smash Noir</p>
+              <p class="feature-chip__desc">2× smash 90 g · cheddar · cebola na chapa</p>
+            </div>
+            <button class="round-btn round-btn--lg" type="button" data-add="b7" aria-label="Adicionar Smash Noir ao carrinho">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+          </div>
+          <dl class="stats">
+            <div class="stat"><dt class="stat__label">na grelha</dt><dd class="stat__num">400°</dd></div>
+            <div class="stat"><dt class="stat__label">blend da casa</dt><dd class="stat__num">180g</dd></div>
+            <div class="stat"><dt class="stat__label">de defumação</dt><dd class="stat__num">8h</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAIXA ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Carvão vegetal ◆ Blend moído no dia ◆ Brioche tostado ◆ Bacon defumado na casa ◆ Fumaça de macieira ◆ Queijo derretido na grelha ◆&nbsp;</span>
+        <span>Carvão vegetal ◆ Blend moído no dia ◆ Brioche tostado ◆ Bacon defumado na casa ◆ Fumaça de macieira ◆ Queijo derretido na grelha ◆&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ============ MAIS PEDIDOS ============ -->
+    <section class="section" id="destaques" aria-labelledby="destaques-titulo">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">01 — Os favoritos</p>
+            <h2 class="section__title" id="destaques-titulo">Os mais<br>pedidos <em>da casa</em></h2>
+          </div>
+          <p class="section__intro">Quatro receitas que saem da grelha sem parar. Escolhidas por quem senta no balcão toda semana.</p>
+        </div>
+
+        <div class="best-grid">
+          <article class="best-feature zoom">
+            <img src="img/fumaca-dupla.jpg" srcset="img/sm/fumaca-dupla.jpg 800w, img/fumaca-dupla.jpg 1600w" sizes="(max-width: 960px) 100vw, 520px" width="1600" height="1209" loading="lazy" decoding="async" alt="Hambúrguer duplo com pastrami, cheddar derretido e pão tostado">
+            <div class="best-feature__shade" aria-hidden="true"></div>
+            <span class="pill-tag">Nº 1 da casa</span>
+            <div class="best-feature__body">
+              <h3>Fumaça Dupla</h3>
+              <p>Dois smash de 120 g, pastrami defumado na casa, cheddar duplo, picles e molho brasa.</p>
+              <div class="price-row">
+                <span class="price price--xl">R$ 52,90</span>
+                <button class="btn btn--fire" type="button" data-add="b2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  Adicionar<span class="sr-only"> Fumaça Dupla</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="best-card">
+            <div class="best-card__media zoom">
+              <img src="img/sm/triplo-carvao.jpg" srcset="img/sm/triplo-carvao.jpg 800w, img/triplo-carvao.jpg 1600w" sizes="(max-width: 960px) 100vw, 420px" width="800" height="570" loading="lazy" decoding="async" alt="Hambúrguer triplo com cheddar escorrendo entre as carnes">
+              <span class="rank">Nº 2</span>
+            </div>
+            <div class="best-card__body">
+              <h3>Triplo Carvão</h3>
+              <p>Três smash selados na grelha, american cheese triplo e o molho secreto da casa.</p>
+              <div class="price-row">
+                <span class="price price--lg">R$ 54,90</span>
+                <button class="round-btn" type="button" data-add="b5" aria-label="Adicionar Triplo Carvão ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="best-card">
+            <div class="best-card__media zoom">
+              <img src="img/sm/smash-noir.jpg" srcset="img/sm/smash-noir.jpg 800w, img/smash-noir.jpg 1600w" sizes="(max-width: 960px) 100vw, 420px" width="800" height="1202" loading="lazy" decoding="async" alt="Hambúrguer em pão escuro com queijo e folhas">
+              <span class="rank">Nº 3</span>
+            </div>
+            <div class="best-card__body">
+              <h3>Smash Noir</h3>
+              <p>Pão australiano, dois smash de 90 g, cheddar, cebola na chapa e picles da casa.</p>
+              <div class="price-row">
+                <span class="price price--lg">R$ 44,90</span>
+                <button class="round-btn" type="button" data-add="b7" aria-label="Adicionar Smash Noir ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="best-wide">
+            <div class="best-wide__media zoom">
+              <img src="img/sm/brasa-raclette.jpg" srcset="img/sm/brasa-raclette.jpg 800w, img/brasa-raclette.jpg 1600w" sizes="(max-width: 960px) 100vw, 440px" width="800" height="1102" loading="lazy" decoding="async" alt="Hambúrguer coberto de queijo raclette derretido sobre tábua">
+            </div>
+            <div class="best-wide__body">
+              <span class="kicker">Nº 4 · Assinatura do chef</span>
+              <h3>Brasa Raclette</h3>
+              <p>Blend 200 g, raclette derretido na hora sobre o burger, presunto cru e rúcula.</p>
+              <div class="price-row">
+                <span class="price price--lg">R$ 58,90</span>
+                <button class="round-btn" type="button" data-add="b6" aria-label="Adicionar Brasa Raclette ao carrinho">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CARDÁPIO ============ -->
+    <section class="section section--graphite" id="cardapio" aria-labelledby="cardapio-titulo">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">02 — Cardápio</p>
+            <h2 class="section__title" id="cardapio-titulo">Escolha<br>sua <em>brasa</em></h2>
+          </div>
+          <div class="filters" id="filtros" role="group" aria-label="Filtrar cardápio por categoria"></div>
+        </div>
+        <div class="menu-grid" id="menu-grid">
+          <noscript><p class="section__intro">Ative o JavaScript para ver o cardápio completo e montar seu pedido.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ O PREPARO ============ -->
+    <section class="prep split" id="brasa" aria-labelledby="brasa-titulo">
+      <div class="prep__media">
+        <img src="img/sm/preparo-costela.jpg" srcset="img/sm/preparo-costela.jpg 800w, img/preparo-costela.jpg 1600w" sizes="(max-width: 960px) 100vw, 52vw" width="800" height="1066" loading="lazy" decoding="async" alt="Costela com crosta escura de defumação sobre tábua de madeira">
+        <div class="prep__shade" aria-hidden="true"></div>
+        <p class="live-badge"><span class="live-badge__dot" aria-hidden="true"></span>Grelha acesa desde as 17h</p>
+      </div>
+      <div class="prep__body">
+        <p class="eyebrow">03 — O preparo</p>
+        <h2 class="section__title" id="brasa-titulo">Carvão,<br>tempo e <em>paciência</em></h2>
+        <p class="prep__lead">Nada de chapa elétrica. Cada hambúrguer da BRASA passa pela grelha de ferro sobre carvão vegetal — é ali que nasce a crosta, o aroma e as marcas que você vê no prato.</p>
+        <ol class="steps">
+          <li><span class="steps__num" aria-hidden="true">01</span><div><h3>O blend</h3><p>Costela, acém e peito moídos na casa todas as manhãs. 180 g, só carne e sal.</p></div></li>
+          <li><span class="steps__num" aria-hidden="true">02</span><div><h3>O carvão</h3><p>Carvão vegetal de eucalipto aceso 40 minutos antes do serviço, até a grelha chegar a 400 °C.</p></div></li>
+          <li><span class="steps__num" aria-hidden="true">03</span><div><h3>A selagem</h3><p>Dois minutos e meio de cada lado: crosta caramelizada por fora, suculento por dentro.</p></div></li>
+          <li><span class="steps__num" aria-hidden="true">04</span><div><h3>A fumaça</h3><p>Bacon e costelinha defumados por até 8 horas em lenha de macieira, no defumador da casa.</p></div></li>
+        </ol>
+        <div class="heat" aria-hidden="true">
+          <div class="heat__labels"><span>Brasa</span><span>400 °C</span></div>
+          <div class="heat__bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERIA ============ -->
+    <section class="section" id="galeria" aria-labelledby="galeria-titulo">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">04 — Galeria</p>
+            <h2 class="section__title" id="galeria-titulo">Direto <em>da grelha</em></h2>
+          </div>
+          <p class="section__intro">Fumaça, queijo escorrendo e madeira quente. O que acontece na cozinha, sem filtro.</p>
+        </div>
+        <div class="gallery">
+          <figure class="g-a zoom">
+            <img src="img/sm/galeria-balcao.jpg" srcset="img/sm/galeria-balcao.jpg 800w, img/galeria-balcao.jpg 1600w" sizes="(max-width: 960px) 100vw, 660px" width="800" height="1000" loading="lazy" decoding="async" alt="Dois hambúrgueres em tábua de madeira com garrafas ao fundo, luz baixa">
+            <figcaption>Noite de sexta no balcão</figcaption>
+          </figure>
+          <figure class="zoom">
+            <img src="img/sm/galeria-burger.jpg" srcset="img/sm/galeria-burger.jpg 800w, img/galeria-burger.jpg 1600w" sizes="(max-width: 960px) 50vw, 330px" width="800" height="1199" loading="lazy" decoding="async" alt="Hambúrguer com alface, tomate e cebola roxa em fundo preto">
+          </figure>
+          <figure class="g-c zoom">
+            <img src="img/sm/galeria-corte-grelhado.jpg" srcset="img/sm/galeria-corte-grelhado.jpg 800w, img/galeria-corte-grelhado.jpg 1600w" sizes="(max-width: 960px) 50vw, 330px" width="800" height="450" loading="lazy" decoding="async" alt="Carne fatiada com crosta de grelha sobre tábua de madeira">
+            <figcaption>Ponto perfeito</figcaption>
+          </figure>
+          <figure class="zoom">
+            <img src="img/sm/galeria-fritas-burger.jpg" srcset="img/sm/galeria-fritas-burger.jpg 800w, img/galeria-fritas-burger.jpg 1600w" sizes="(max-width: 960px) 50vw, 330px" width="800" height="534" loading="lazy" decoding="async" alt="Batatas fritas rústicas em copo de metal ao lado de um hambúrguer">
+          </figure>
+          <figure class="g-e zoom">
+            <img src="img/sm/galeria-corte-fritas.jpg" srcset="img/sm/galeria-corte-fritas.jpg 800w, img/galeria-corte-fritas.jpg 1600w" sizes="(max-width: 960px) 100vw, 660px" width="800" height="534" loading="lazy" decoding="async" alt="Corte grelhado com batatas rústicas e ervas em prato branco">
+            <figcaption>Do carvão para a mesa</figcaption>
+          </figure>
+          <div class="g-f insta-tile">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+            <div>
+              <p class="insta-tile__title">Mais fumaça<br>no Instagram</p>
+              <a class="insta-tile__link" href="https://instagram.com/" data-social="instagram" data-fallback="text" target="_blank" rel="noopener">@brasaburgerhouse →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HISTÓRIA ============ -->
+    <section class="section story" id="historia" aria-labelledby="historia-titulo">
+      <div class="story__wood" aria-hidden="true"></div>
+      <div class="container split-r story__grid">
+        <div>
+          <h2 class="eyebrow eyebrow--light" id="historia-titulo">05 — Nossa história</h2>
+          <figure>
+            <blockquote class="story__quote">“A gente não inventou o fogo. Só decidiu nunca mais cozinhar sem ele.”</blockquote>
+            <figcaption class="story__author">Rafael &amp; Marina Albuquerque · Fundadores</figcaption>
+          </figure>
+          <p class="story__text">A BRASA começou com uma churrasqueira de tambor, um food truck e uma ideia teimosa: hambúrguer artesanal tem que ter gosto de quintal de domingo. Hoje são duas grelhas, um defumador próprio e a mesma regra — se não passou pelo carvão, não sai da cozinha.</p>
+          <ol class="timeline">
+            <li><p class="timeline__year">2019</p><p>Food truck e uma grelha a carvão</p></li>
+            <li><p class="timeline__year">2021</p><p>A primeira casa, com balcão aberto para a grelha</p></li>
+            <li><p class="timeline__year">2024</p><p>Defumador próprio e bacon feito em casa</p></li>
+          </ol>
+        </div>
+        <div class="story__media">
+          <div class="story__photo zoom">
+            <img src="img/sm/salao.jpg" srcset="img/sm/salao.jpg 800w, img/salao.jpg 1600w" sizes="(max-width: 960px) 100vw, 640px" width="800" height="600" loading="lazy" decoding="async" alt="Salão da hamburgueria com mesas de madeira, luminárias pendentes e luz quente">
+          </div>
+          <div class="story__card">
+            <p class="story__card-title">Fogo · Origem · Tempo</p>
+            <p>Os três ingredientes que não aparecem no cardápio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOCALIZAÇÃO ============ -->
+    <section class="section" id="visite" aria-labelledby="visite-titulo">
+      <div class="container split-r visit">
+        <div class="visit__info">
+          <p class="eyebrow">06 — Visite</p>
+          <h2 class="section__title" id="visite-titulo">A grelha<br>está <em>acesa</em></h2>
+          <address class="address">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C27A4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5a7 7 0 0 0-14 0C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <p>Rua da Brasa, 400 — Vila Madalena<br><span>São Paulo · SP · 05400-000</span></p>
+          </address>
+          <h3 class="sr-only">Horário de funcionamento</h3>
+          <dl class="hours">
+            <div><dt>Segunda</dt><dd class="is-closed">Fechado</dd></div>
+            <div><dt>Terça a quinta</dt><dd>18h — 23h</dd></div>
+            <div><dt>Sexta e sábado</dt><dd>18h — 01h</dd></div>
+            <div><dt>Domingo</dt><dd>12h — 23h</dd></div>
+          </dl>
+          <div class="btn-row">
+            <a class="btn btn--fire" href="https://www.google.com/maps" data-maps target="_blank" rel="noopener">Como chegar<span class="sr-only"> (abre o Google Maps)</span></a>
+            <a class="btn btn--ghost" href="https://wa.me/" data-wa target="_blank" rel="noopener">Reservar pelo WhatsApp<span class="sr-only"> (abre em nova aba)</span></a>
+          </div>
+        </div>
+
+        <div class="map" role="img" aria-label="Mapa ilustrativo da região da Vila Madalena com a localização da BRASA">
+          <svg viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g stroke="#2B2420" stroke-width="2" fill="none">
+              <path d="M-20 80 L620 140"/><path d="M-20 220 L620 250"/><path d="M-20 380 L620 330"/><path d="M-20 470 L620 500"/>
+              <path d="M90 -20 L130 540"/><path d="M250 -20 L230 540"/><path d="M400 -20 L430 540"/><path d="M530 -20 L500 540"/>
+            </g>
+            <path d="M-20 300 C 150 270, 260 330, 380 250 S 560 180, 640 200" stroke="#3A2E27" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <path d="M120 470 C 180 400, 230 360, 300 300" stroke="#5A3A26" stroke-width="3" fill="none" stroke-dasharray="2 9" stroke-linecap="round"/>
+            <rect x="150" y="150" width="70" height="50" rx="6" fill="#1F1A16"/>
+            <rect x="430" y="380" width="60" height="70" rx="6" fill="#1F1A16"/>
+            <rect x="440" y="60" width="80" height="45" rx="6" fill="#1F1A16"/>
+          </svg>
+          <div class="map__pin" aria-hidden="true"><span class="map__ring"></span><span class="map__dot"></span></div>
+          <div class="map__card" aria-hidden="true">
+            <div>
+              <p class="map__name">BRASA Burger House</p>
+              <p class="map__note">Delivery próprio num raio de 6 km</p>
+            </div>
+            <span class="kicker">Vila Madalena</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#topo" class="logo" aria-label="BRASA Burger House — voltar ao topo">
+            <svg width="30" height="38" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 2c2 7 9 11 9 20a9 9 0 0 1-18 0c0-5 3-8 5-11 0 4 2 6 4 6-2-6 0-11 0-15z" fill="none" stroke="#D9541E" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 24c1.6 2 3 3.2 3 5.4a3 3 0 0 1-6 0c0-2 1.4-3.4 3-5.4z" fill="#C27A4A"/></svg>
+            <span class="logo__name">BRASA</span>
+          </a>
+          <p class="footer__about">Hambúrguer artesanal grelhado no carvão. Desde 2019.</p>
+        </div>
+        <nav aria-labelledby="rodape-navegue">
+          <h2 class="footer__title" id="rodape-navegue">Navegue</h2>
+          <ul class="footer__links">
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#brasa">O preparo</a></li>
+            <li><a href="#historia">Nossa história</a></li>
+            <li><a href="#visite">Localização</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__title">Contato</h2>
+          <ul class="footer__links">
+            <li><a href="https://wa.me/" data-wa target="_blank" rel="noopener">WhatsApp de pedidos</a></li>
+            <li id="contato-telefone"></li>
+            <li id="contato-email"></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Redes</h2>
+          <div class="socials">
+            <a class="icon-btn" href="https://instagram.com/" data-social="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+            <a class="icon-btn" href="https://tiktok.com/" data-social="tiktok" target="_blank" rel="noopener" aria-label="TikTok"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.6 2.4 4.5 5 5"/></svg></a>
+            <a class="icon-btn" href="https://facebook.com/" data-social="facebook" target="_blank" rel="noopener" aria-label="Facebook"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V21"/><path d="M6 11h8"/></svg></a>
+            <a class="icon-btn" href="https://wa.me/" data-wa target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <p class="footer__word" aria-hidden="true">BRASA</p>
+      <div class="footer__bottom">
+        <p>© <span id="ano">2026</span> BRASA Burger House. Marca fictícia.</p>
+        <p>Fotos: Unsplash · Preços ilustrativos</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ AVISO "ADICIONADO" ============ -->
+  <div class="toast" id="toast" role="status" hidden>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B4451A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+    <span id="toast-text"></span>
+    <button type="button" class="toast__btn" data-open-cart>Ver<span class="sr-only"> carrinho</span></button>
+  </div>
+
+  <!-- ============ CARRINHO ============ -->
+  <div class="cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <button class="cart__backdrop" type="button" data-close-cart tabindex="-1" aria-label="Fechar carrinho"></button>
+    <aside class="cart__panel">
+      <div class="cart__head">
+        <div>
+          <h2 class="cart__title" id="cart-title">Seu pedido</h2>
+          <p class="cart__count" id="cart-count" aria-live="polite">0 itens</p>
+        </div>
+        <button class="icon-btn" id="cart-close" type="button" data-close-cart aria-label="Fechar carrinho">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+
+      <!-- Etapa 1: itens -->
+      <div class="cart__view" id="cart-view">
+        <div class="cart__body">
+          <div class="cart__empty" id="cart-empty">
+            <svg width="52" height="64" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 2c2 7 9 11 9 20a9 9 0 0 1-18 0c0-5 3-8 5-11 0 4 2 6 4 6-2-6 0-11 0-15z" fill="none" stroke="#8F5530" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <p class="cart__empty-title">Carrinho vazio</p>
+            <p>A brasa já está acesa. Escolha seu burger no cardápio.</p>
+            <a class="btn btn--fire" href="#cardapio" data-close-cart>Ver cardápio</a>
+          </div>
+          <ul class="cart__lines" id="cart-lines" aria-label="Itens no carrinho"></ul>
+        </div>
+
+        <div class="cart__foot" id="cart-foot" hidden>
+          <div class="cart__row"><span>Subtotal</span><span data-total="subtotal">R$ 0,00</span></div>
+          <div class="cart__row"><span>Entrega (estimativa)</span><span data-total="fee">R$ 0,00</span></div>
+          <div class="cart__row cart__row--total"><span>Total</span><span data-total="total">R$ 0,00</span></div>
+          <button class="btn btn--fire btn--block" type="button" data-view="checkout">Finalizar pedido
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="cart__note">Carrinho demonstrativo — o pedido é confirmado pelo WhatsApp.</p>
+        </div>
+      </div>
+
+      <!-- Etapa 2: dados do pedido -->
+      <div class="cart__view" id="checkout-view" hidden>
+        <form class="checkout" id="checkout-form" novalidate>
+          <div class="cart__body">
+            <button class="back-btn" type="button" data-view="cart">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+              Voltar aos itens
+            </button>
+
+            <div class="field">
+              <label for="nome">Seu nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required aria-describedby="nome-erro">
+              <p class="field__error" id="nome-erro" hidden>Informe seu nome.</p>
+            </div>
+
+            <fieldset class="field">
+              <legend>Como prefere receber?</legend>
+              <div class="choice">
+                <label><input type="radio" name="modo" value="entrega" checked> Entrega</label>
+                <label><input type="radio" name="modo" value="retirada"> Retirar na loja</label>
+              </div>
+            </fieldset>
+
+            <div class="field" id="campo-endereco">
+              <label for="endereco">Endereço de entrega</label>
+              <input id="endereco" name="endereco" type="text" autocomplete="street-address" placeholder="Rua, número, bairro" required aria-describedby="endereco-erro">
+              <p class="field__error" id="endereco-erro" hidden>Informe o endereço para a entrega.</p>
+            </div>
+
+            <div class="field">
+              <label for="pagamento">Pagamento</label>
+              <select id="pagamento" name="pagamento">
+                <option>Pix</option>
+                <option>Cartão na entrega</option>
+                <option>Dinheiro</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="obs">Observações <span class="field__opt">(opcional)</span></label>
+              <textarea id="obs" name="obs" rows="3" placeholder="Ponto da carne, sem cebola, troco para…"></textarea>
+            </div>
+          </div>
+
+          <div class="cart__foot">
+            <div class="cart__row"><span>Subtotal</span><span data-total="subtotal">R$ 0,00</span></div>
+            <div class="cart__row"><span id="checkout-fee-label">Entrega</span><span data-total="fee">R$ 0,00</span></div>
+            <div class="cart__row cart__row--total"><span>Total</span><span data-total="total">R$ 0,00</span></div>
+            <button class="btn btn--fire btn--block" type="submit">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg>
+              Enviar pedido no WhatsApp
+            </button>
+            <p class="cart__note">Abre o WhatsApp com o pedido pronto para enviar.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Etapa 3: confirmação -->
+      <div class="cart__view" id="done-view" hidden>
+        <div class="cart__body cart__done">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#E39A66" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
+          <h3 class="cart__empty-title" id="done-title" tabindex="-1">Pedido pronto!</h3>
+          <p>Abrimos o WhatsApp com o seu pedido. É só tocar em enviar — a gente confirma o tempo de preparo por lá.</p>
+          <a class="btn btn--ghost" id="done-wa" href="https://wa.me/" target="_blank" rel="noopener">Abrir o WhatsApp de novo</a>
+          <button class="btn btn--fire" type="button" data-view="new">Fazer novo pedido</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

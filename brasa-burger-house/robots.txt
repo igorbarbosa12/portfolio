@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brasaburguerhouse.netlify.app/sitemap.xml
